@@ -4,7 +4,8 @@
 BACKUP_DIR=/home/adam-user/backup/
 current_date=$(date +%Y-%m-%d) 
 two_days_ago=$(date -d "$current_date -2 days" +%Y-%m-%d)
-zip_filename=namaRS-$current_date.zip
+namaRS=RSBhaktiHusadaRembang.zip
+zip_filename=$namaRS-$current_date.zip
 zip_file=backup-$current_date.zip
 
 docker exec -t db-transaksi-lis pg_dump -c -U postgres -d transaksi > $BACKUP_DIR/transaksi_$current_date.sql
